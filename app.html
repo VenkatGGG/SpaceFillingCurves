@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Filling Curves - Interactive Visualization</title>
+    <link rel="stylesheet" href="app-styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">Space Filling Curves</h1>
+            <p class="subtitle">Interactive Mathematical Art & Visualization</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="curve-nav">
+            <button class="nav-btn active" data-curve="hilbert">Hilbert Curve</button>
+            <button class="nav-btn" data-curve="peano">Peano Curve</button>
+            <button class="nav-btn" data-curve="triangle">Triangle Curve</button>
+            <button class="nav-btn" data-curve="flowsnake">Flow Snake</button>
+            <button class="nav-btn" data-curve="koch">Koch Flow Snake</button>
+        </nav>
+
+        <!-- Controls Panel -->
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="order">Complexity:</label>
+                <input type="range" id="order" min="1" max="7" value="5">
+                <span id="orderValue">5</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="50" value="1">
+                <span id="speedValue">1</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="size">Canvas Size:</label>
+                <input type="range" id="size" min="400" max="900" value="700">
+                <span id="sizeValue">700</span>
+            </div>
+            
+            <div class="animation-controls">
+                <button id="startBtn" class="control-btn primary">▶ Start</button>
+                <button id="pauseBtn" class="control-btn secondary" disabled>⏸ Pause</button>
+                <button id="resetBtn" class="control-btn tertiary">🔄 Reset</button>
+            </div>
+        </div>
+
+        <!-- Canvas Container -->
+        <div class="canvas-container">
+            <canvas id="canvas" width="700" height="700"></canvas>
+            <div class="curve-info" id="curveInfo">
+                <h3 id="curveTitle">Hilbert Curve</h3>
+                <p id="curveDescription">The Hilbert curve is a continuous fractal space-filling curve that maps a one-dimensional line to a two-dimensional square.</p>
+            </div>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="progress-text" id="progressText">Ready to start</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
