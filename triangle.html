@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Filling Curve Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="curve-page">
+        <div class="curve-header">
+            <h1 class="curve-title">Triangle Filling Curve</h1>
+            <a href="index.html" class="back-btn">← Back to Menu</a>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="order">Order (1-6):</label>
+                <input type="range" id="order" min="1" max="6" value="4">
+                <span id="orderValue">4</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="50" value="20">
+                <span id="speedValue">20</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="size">Canvas Size:</label>
+                <input type="range" id="size" min="300" max="800" value="600">
+                <span id="sizeValue">600</span>
+            </div>
+            
+            <button id="startBtn">Start Animation</button>
+            <button id="pauseBtn" disabled>Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div>
+        
+        <div class="info">
+            <p>The Triangle Filling Curve uses recursive patterns to fill triangular regions, creating a self-similar fractal structure.</p>
+        </div>
+    </div>
+    
+    <script src="triangle.js"></script>
+</body>
+</html>

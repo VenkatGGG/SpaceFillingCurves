@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peano Curve Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="curve-page">
+        <div class="curve-header">
+            <h1 class="curve-title">Peano Curve</h1>
+            <a href="index.html" class="back-btn">← Back to Menu</a>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="order">Order (1-5):</label>
+                <input type="range" id="order" min="1" max="5" value="3">
+                <span id="orderValue">3</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="50" value="15">
+                <span id="speedValue">15</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="size">Canvas Size:</label>
+                <input type="range" id="size" min="300" max="800" value="600">
+                <span id="sizeValue">600</span>
+            </div>
+            
+            <button id="startBtn">Start Animation</button>
+            <button id="pauseBtn" disabled>Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div>
+        
+        <div class="info">
+            <p>The Peano curve is one of the first space-filling curves discovered, mapping a line to completely fill a square through recursive self-similar patterns.</p>
+        </div>
+    </div>
+    
+    <script src="peano.js"></script>
+</body>
+</html>

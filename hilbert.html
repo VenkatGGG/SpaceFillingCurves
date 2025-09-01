@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilbert Curve Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="curve-page">
+        <div class="curve-header">
+            <h1 class="curve-title">Hilbert Curve</h1>
+            <a href="index.html" class="back-btn">← Back to Menu</a>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="order">Order (1-7):</label>
+                <input type="range" id="order" min="1" max="7" value="4">
+                <span id="orderValue">4</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="50" value="10">
+                <span id="speedValue">10</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="size">Canvas Size:</label>
+                <input type="range" id="size" min="300" max="800" value="600">
+                <span id="sizeValue">600</span>
+            </div>
+            
+            <button id="startBtn">Start Animation</button>
+            <button id="pauseBtn" disabled>Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div>
+        
+        <div class="info">
+            <p>The Hilbert curve is a continuous fractal space-filling curve that maps a one-dimensional line to a two-dimensional square.</p>
+        </div>
+    </div>
+    
+    <script src="hilbert.js"></script>
+</body>
+</html>
