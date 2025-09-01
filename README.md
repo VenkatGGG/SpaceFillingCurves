@@ -1,38 +1,55 @@
-# Space Filling Curves Animation
+# Space Filling Curves - Interactive Visualization
 
-An interactive web application showcasing beautiful space-filling curves with smooth animations and customizable controls.
+🎨 A beautiful, modern web application showcasing mathematical space-filling curves with smooth animations and interactive controls.
 
-## Features
+![Space Filling Curves Application](screenshot.png)
 
-- **5 Different Space-Filling Curves:**
-  - Hilbert Curve - Classic recursive square-filling pattern
-  - Peano Curve - One of the first discovered space-filling curves
-  - Triangle Filling Curve - Recursive triangular patterns
-  - Flow Snake (Gosper Curve) - Hexagonal space-filling pattern
-  - Koch Flow Snake - Combination of Koch snowflake and flow snake patterns
+*Interactive visualization of the Triangle Filling Curve with modern gradient UI*
 
-- **Interactive Controls:**
-  - Adjustable curve order/complexity
-  - Variable animation speed
-  - Customizable canvas size
-  - Play, pause, and reset functionality
+## ✨ Features
 
-- **Visual Features:**
-  - Dark theme with bright, colorful curves
-  - Different colors for each curve segment to visualize progression
-  - Smooth animations with highlighted start and current points
-  - Responsive design that works on different screen sizes
+### 🎯 **Unified Application**
+- **Single Page Interface** - All curves accessible from one beautiful application
+- **Tab Navigation** - Instantly switch between different space-filling curves
+- **Real-time Updates** - Changes apply immediately without page reloads
 
-## How to Use
+### 🌈 **Five Interactive Space-Filling Curves**
+- **Hilbert Curve** - Classic recursive square-filling pattern (Order 1-7)
+- **Peano Curve** - Historic space-filling curve with base-3 recursion (Order 1-5)
+- **Triangle Filling Curve** - Recursive triangular patterns (Order 1-6)
+- **Flow Snake (Gosper Curve)** - Hexagonal L-system patterns (Order 1-6)
+- **Koch Flow Snake** - Hybrid Koch snowflake and flow snake (Order 1-5)
 
-1. Open `index.html` in your web browser
-2. Select a curve from the main menu
-3. Adjust the controls:
-   - **Order**: Controls the complexity/recursion depth of the curve
-   - **Speed**: Controls how fast the animation draws
-   - **Canvas Size**: Adjusts the size of the drawing area
-4. Click "Start Animation" to begin the drawing process
-5. Use "Pause" to pause and "Reset" to start over
+### 🎮 **Interactive Controls**
+- **Complexity Slider** - Adjustable recursion depth for each curve
+- **Speed Control** - Variable animation speed (1-50, default: 1)
+- **Canvas Size** - Customizable viewing area (400-900px, default: 700px)
+- **Animation Controls** - Start, pause, and reset with visual feedback
+
+### 🎨 **Modern Visual Design**
+- **Purple Gradient Theme** - Beautiful modern UI with glass-morphism effects
+- **Animated Background** - Floating particles and smooth transitions
+- **Colorful Curves** - Rainbow gradients to visualize curve progression
+- **Progress Tracking** - Real-time progress bar and completion percentage
+- **Responsive Design** - Works perfectly on all screen sizes
+
+## 🚀 How to Use
+
+### **Quick Start**
+1. **Open `app.html`** in any modern web browser
+2. **Select a curve** from the navigation tabs at the top
+3. **Adjust settings** using the intuitive sliders:
+   - **Complexity**: Controls the recursion depth/detail level
+   - **Speed**: Animation drawing speed (1=slowest, 50=fastest)
+   - **Canvas Size**: Viewing area dimensions
+4. **Click ▶ Start** to begin the mesmerizing animation
+5. **Monitor progress** with the real-time progress bar
+6. **Use controls**: Pause ⏸, Reset 🔄, or switch curves anytime
+
+### **Default Settings** 
+- **Speed**: 1 (slow, detailed animation)
+- **Complexity**: 5 (high detail)
+- **Canvas Size**: 700px (large viewing area)
 
 ## Technical Implementation
 
@@ -53,24 +70,31 @@ Works in all modern browsers that support:
 - ES6 JavaScript features
 - CSS Grid and Flexbox
 
-## Files Structure
+## 📁 Project Structure
 
+### **Unified Application** (Recommended)
 ```
 /
-├── index.html              # Main menu page
-├── styles.css              # Shared CSS styles
-├── hilbert.html            # Hilbert curve page
-├── hilbert.js              # Hilbert curve implementation
-├── peano.html              # Peano curve page
-├── peano.js                # Peano curve implementation
-├── triangle.html           # Triangle curve page
-├── triangle.js             # Triangle curve implementation
-├── flowsnake.html          # Flow snake page
-├── flowsnake.js            # Flow snake implementation
-├── koch-flowsnake.html     # Koch flow snake page
-├── koch-flowsnake.js       # Koch flow snake implementation
-└── README.md               # This file
+├── app.html                # 🌟 Main unified application 
+├── app.js                  # 🧠 Complete curve logic & controls
+├── app-styles.css          # 🎨 Modern purple gradient theme
+├── screenshot.png          # 📸 Application preview
+└── README.md               # 📚 Documentation
 ```
+
+### **Individual Pages** (Legacy)
+```
+/
+├── index.html              # Original main menu
+├── styles.css              # Original dark theme
+├── hilbert.html/.js        # Individual Hilbert curve page
+├── peano.html/.js          # Individual Peano curve page  
+├── triangle.html/.js       # Individual Triangle curve page
+├── flowsnake.html/.js      # Individual Flow snake page
+└── koch-flowsnake.html/.js # Individual Koch flow snake page
+```
+
+**💡 Tip**: Use `app.html` for the best experience with the modern unified interface!
 
 ## License
 
